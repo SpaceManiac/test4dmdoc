@@ -27,5 +27,5 @@
 /datum/one/two/proc/foo()
 
 /// This is a global proc.
-/proc/bar()
+/proc/bar(/datum/A, /datum/one/B, /datum/one/two/C = new)
 
