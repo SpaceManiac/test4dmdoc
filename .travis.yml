@@ -18,9 +18,13 @@ matrix:
         - ~/dreamchecker
 
     - name: "dmdoc"
+      if: branch = master AND head_branch IS blank
       install:
         - wget -O ~/dmdoc "https://github.com/SpaceManiac/SpacemanDMM/releases/download/suite-1.0/dmdoc"
         - chmod +x ~/dmdoc
         - ~/dmdoc --version
+      before_script:
+        # Try to put git back on a branch name if it isn't already, to aid
+        - git checkout -qf $(git name-rev --name-only HEAD) || true
       script:
         - ~/dmdoc
