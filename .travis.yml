@@ -13,12 +13,14 @@ matrix:
       install:
         - wget -O ~/dreamchecker "https://github.com/SpaceManiac/SpacemanDMM/releases/download/suite-1.0/dreamchecker"
         - chmod +x ~/dreamchecker
+        - ~/dreamchecker --version
       script:
         - ~/dreamchecker
 
     - name: "dmdoc"
       install:
-        - wget -O ~/dmdoc "https://github.com/SpaceManiac/SpacemanDMM/releases/download/suite-1.0/dreamchecker"
+        - wget -O ~/dmdoc "https://github.com/SpaceManiac/SpacemanDMM/releases/download/suite-1.0/dmdoc"
         - chmod +x ~/dmdoc
+        - ~/dmdoc --version
       script:
         - ~/dmdoc
