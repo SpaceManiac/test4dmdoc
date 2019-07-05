@@ -28,3 +28,6 @@ matrix:
         - git checkout -qf $(git name-rev --name-only HEAD) || true
       script:
         - ~/dmdoc
+      deploy:
+        provider: pages
+        skip_cleanup: true
