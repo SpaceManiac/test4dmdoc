@@ -31,3 +31,5 @@ matrix:
       deploy:
         provider: pages
         skip_cleanup: true
+        local_dir: dmdoc
+        github_token: $DMDOC_GITHUB_TOKEN
