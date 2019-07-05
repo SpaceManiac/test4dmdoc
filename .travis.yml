@@ -1,0 +1,24 @@
+language: generic
+dist: xenial
+sudo: false
+
+branches:
+  except:
+  - ___TGS3TempBranch
+  - ___TGSTempBranch
+
+matrix:
+  include:
+    - name: "DreamChecker"
+      install:
+        - wget -O ~/dreamchecker "https://github.com/SpaceManiac/SpacemanDMM/releases/download/suite-1.0/dreamchecker"
+        - chmod +x ~/dreamchecker
+      script:
+        - ~/dreamchecker
+
+    - name: "dmdoc"
+      install:
+        - wget -O ~/dmdoc "https://github.com/SpaceManiac/SpacemanDMM/releases/download/suite-1.0/dreamchecker"
+        - chmod +x ~/dmdoc
+      script:
+        - ~/dmdoc
